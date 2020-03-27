@@ -17,7 +17,7 @@ ggplot(LungCapDF, aes(x = Age, y = LungCap)) + geom_point(color = "darkgreen") +
 ggplot(LungCapDF, aes(x = Age, y = LungCap)) + geom_point(color = "darkgreen") + labs(x = "Age", y = "Lung Capacity", title = "Lung Capacity over Age") + geom_smooth(method = "lm", se = FALSE)
 # Fit linear regression model between LungCap and Age using the lm() function and save this to Model_LungCap
 Model_LungCap <- lm(LungCap ~ Age, data = LungCapDF)
-# Use the get_regression_table() function from the moderndive package to format the output from the lm function. Identify slope and intercept. Report regression line
+# Use the get_regression_table() function from the moderndive package to format the output from the lm function. Report regression line
 get_regression_table(Model_LungCap)
 # Intercept = 1.15 , Age = 0.545
 # y^ = 1.15 + 0.545 * Age (or x)
